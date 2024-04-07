@@ -35,7 +35,13 @@ export const Experience = () => {
         // to shoot
         buttons: [{ id: "fire", label: "fire" }],
       });
+      // copy the above and use it for the new player
+      const newPlayer = { state, joystick };
+      state.setState("health", 100);
     });
+    //
+    //
+
     //
   }, []);
   // -------------------
