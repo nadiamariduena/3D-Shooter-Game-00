@@ -1,7 +1,22 @@
 import { Environment, OrbitControls } from "@react-three/drei";
+import { insertCoin } from "playroomkit";
+import { useEffect } from "react";
 import { Map } from "./Map";
 
 export const Experience = () => {
+  //
+  //
+
+  const start = async () => {
+    await insertCoin();
+  };
+
+  //
+  useEffect(() => {
+    start();
+  }, []);
+  //
+  //
   return (
     <>
       <directionalLight
