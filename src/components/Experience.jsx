@@ -1,18 +1,31 @@
 import { Environment, OrbitControls } from "@react-three/drei";
-import { insertCoin } from "playroomkit";
-import { useEffect } from "react";
+import { insertCoin, Joystick, onPlayerJoin } from "playroomkit";
+import { useEffect, useState } from "react";
 import { Map } from "./Map";
 
 export const Experience = () => {
   //
+  // ** Players
+  const [players, setPlayers] = useState([]);
   //
-
-  // LOG ROOM/session ----
+  // ** LOG ROOM/session ----
   const start = async () => {
     await insertCoin();
   };
+
   useEffect(() => {
     start();
+    // ** Players handler
+    onPlayerJoin((state) => {
+      // this will handle the player that is joining
+      // Joystick will only create UI for current player (myPlayer).
+      // For others, it will only sync their state
+
+      const joystick = new Joystick(state, {
+        //
+      });
+    });
+    //
   }, []);
   // -------------------
   //
