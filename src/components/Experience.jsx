@@ -41,10 +41,12 @@ export const Experience = () => {
       state.setState("deaths", 0);
       state.setState("kills", 0);
       setPlayers((players) => [...players, newPlayer]);
+      //* when the user quits the session */
+      state.onQuit(() => {
+        setPlayers((players) => players.filter((p) => p.state.id !== state.id));
+      });
     });
     //
-    //
-
     //
   }, []);
   // -------------------
