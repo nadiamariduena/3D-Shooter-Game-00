@@ -1,3 +1,4 @@
+import { SoftShadows } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Experience } from "./components/Experience";
 
@@ -6,6 +7,8 @@ function App() {
     // Position the camera on the TOP
     <Canvas shadows camera={{ position: [0, 30, 0], fov: 30 }}>
       <color attach="background" args={["#ececec"]} />
+
+      <SoftShadows size={42} />
       <Experience />
     </Canvas>
   );
