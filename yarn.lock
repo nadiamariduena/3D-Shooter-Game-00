@@ -217,6 +217,21 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
+"@discord/embedded-app-sdk@>=1.0.0":
+  version "1.1.2"
+  resolved "https://registry.npmmirror.com/@discord/embedded-app-sdk/-/embedded-app-sdk-1.1.2.tgz"
+  integrity sha512-7m3G0QOYq2T44krit4pUBrB35qhmo8Zthb+NNdEFIn5nW9CwMuvcVIjIqjvxK9Y8XYjhzfYkAVm0d9MzHv/3rQ==
+  dependencies:
+    "@types/lodash.transform" "^4.6.6"
+    "@types/uuid" "^8.3.1"
+    big-integer "1.6.48"
+    decimal.js-light "2.5.0"
+    eventemitter3 "^4.0.7"
+    lodash.transform "^4.6.0"
+    rollup "^4.8.0"
+    uuid "^8.3.2"
+    zod "^3.9.8"
+
 "@esbuild/linux-x64@0.16.17":
   version "0.16.17"
   resolved "https://registry.npmmirror.com/@esbuild/linux-x64/-/linux-x64-0.16.17.tgz"
@@ -364,6 +379,23 @@
   resolved "https://registry.npmmirror.com/@types/draco3d/-/draco3d-1.4.9.tgz"
   integrity sha512-4MMUjMQb4yA5fJ4osXx+QxGHt0/ZSy4spT6jL1HM7Tn8OJEC35siqdnpOo+HxPhYjqEFumKfGVF9hJfdyKBIBA==
 
+"@types/estree@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.npmmirror.com/@types/estree/-/estree-1.0.5.tgz"
+  integrity sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==
+
+"@types/lodash.transform@^4.6.6":
+  version "4.6.9"
+  resolved "https://registry.npmmirror.com/@types/lodash.transform/-/lodash.transform-4.6.9.tgz"
+  integrity sha512-1iIn+l7Vrj8hsr2iZLtxRkcV9AtjTafIyxKO9DX2EEcdOgz3Op5dhwKQFhMJgdfIRbYHBUF+SU97Y6P+zyLXNg==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.17.0"
+  resolved "https://registry.npmmirror.com/@types/lodash/-/lodash-4.17.0.tgz"
+  integrity sha512-t7dhREVv6dbNj0q17X12j7yDG4bD/DHYX7o5/DbDxobP0HnGPgpRz2Ej77aL7TZT3DSw13fqUTj8J4mMnqa7WA==
+
 "@types/offscreencanvas@^2019.6.4":
   version "2019.7.0"
   resolved "https://registry.npmmirror.com/@types/offscreencanvas/-/offscreencanvas-2019.7.0.tgz"
@@ -425,6 +457,11 @@
     fflate "~0.6.9"
     lil-gui "~0.17.0"
 
+"@types/uuid@^8.3.1":
+  version "8.3.4"
+  resolved "https://registry.npmmirror.com/@types/uuid/-/uuid-8.3.4.tgz"
+  integrity sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==
+
 "@types/webxr@*", "@types/webxr@^0.5.2":
   version "0.5.15"
   resolved "https://registry.npmmirror.com/@types/webxr/-/webxr-0.5.15.tgz"
@@ -466,6 +503,11 @@ bidi-js@^1.0.2:
   integrity sha512-rzSy/k7WdX5zOyeHHCOixGXbCHkyogkxPKL2r8QtzHmVQDiWCXUWa18bLdMWT9CYMLOYTjWpTHawuev2ouYJVw==
   dependencies:
     require-from-string "^2.0.2"
+
+big-integer@1.6.48:
+  version "1.6.48"
+  resolved "https://registry.npmmirror.com/big-integer/-/big-integer-1.6.48.tgz"
+  integrity sha512-j51egjPa7/i+RdiRuJbPdJ2FIUYYPhvYLjzoYbcMMm62ooO6F94fETG4MTs46zPAF9Brs04OajboA/qTGuz78w==
 
 browserslist@^4.21.3, "browserslist@>= 4.21.0":
   version "4.21.5"
@@ -530,6 +572,11 @@ debug@^4.1.0:
   dependencies:
     ms "2.1.2"
 
+decimal.js-light@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.npmmirror.com/decimal.js-light/-/decimal.js-light-2.5.0.tgz"
+  integrity sha512-b3VJCbd2hwUpeRGG3Toob+CRo8W22xplipNhP3tN7TSVB/cyMX71P1vM2Xjc9H74uV6dS2hDDmo/rHq8L87Upg==
+
 detect-gpu@^5.0.28:
   version "5.0.38"
   resolved "https://registry.npmmirror.com/detect-gpu/-/detect-gpu-5.0.38.tgz"
@@ -584,6 +631,11 @@ escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmmirror.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz"
   integrity sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==
+
+eventemitter3@^4.0.7:
+  version "4.0.7"
+  resolved "https://registry.npmmirror.com/eventemitter3/-/eventemitter3-4.0.7.tgz"
+  integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
 
 fflate@^0.6.9, fflate@~0.6.9:
   version "0.6.10"
@@ -671,6 +723,11 @@ lodash.pick@^4.4.0:
   resolved "https://registry.npmmirror.com/lodash.pick/-/lodash.pick-4.4.0.tgz"
   integrity sha512-hXt6Ul/5yWjfklSGvLQl8vM//l3FtyHZeuelpzK6mm99pNvN9yTDruNZPEJZD1oWrqo+izBmB7oUfWgcCX7s4Q==
 
+lodash.transform@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.npmmirror.com/lodash.transform/-/lodash.transform-4.6.0.tgz"
+  integrity sha512-LO37ZnhmBVx0GvOU/caQuipEh4GN82TcWv3yHlebGDgOxbxiwwzW5Pcx2AcvpIv2WmvmSMoC492yQFNhy/l/UQ==
+
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmmirror.com/loose-envify/-/loose-envify-1.4.0.tgz"
@@ -732,6 +789,13 @@ picocolors@^1.0.0:
   resolved "https://registry.npmmirror.com/picocolors/-/picocolors-1.0.0.tgz"
   integrity sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==
 
+playroomkit@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.npmmirror.com/playroomkit/-/playroomkit-0.0.72.tgz"
+  integrity sha512-3BY4XhmFAv7hsuMUCSRxJsV4SODQAyAIVFWhpvPTpQl3/JS/RybzIlOv0OQ3WLQygecjvfLycaqRJNmoHo9v1w==
+  optionalDependencies:
+    "@discord/embedded-app-sdk" ">=1.0.0"
+
 postcss@^8.4.21:
   version "8.4.21"
   resolved "https://registry.npmmirror.com/postcss/-/postcss-8.4.21.tgz"
@@ -762,7 +826,7 @@ react-composer@^5.0.3:
   dependencies:
     prop-types "^15.6.0"
 
-react-dom@^18.2.0, react-dom@>=16.13, react-dom@>=18.0:
+react-dom@^18.2.0, react-dom@>=16.13, "react-dom@>=17.0.2 <= 18", react-dom@>=18.0:
   version "18.2.0"
   resolved "https://registry.npmmirror.com/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -800,7 +864,7 @@ react-use-measure@^2.1.1:
   dependencies:
     debounce "^1.2.1"
 
-"react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", react@^18.0.0, react@^18.2.0, "react@>= 16.8.0", react@>=16.13, react@>=16.8, react@>=17.0, react@>=18.0:
+"react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", react@^18.0.0, react@^18.2.0, "react@>= 16.8.0", react@>=16.13, react@>=16.8, react@>=17.0, "react@>=17.0.2 <= 18", react@>=18.0:
   version "18.2.0"
   resolved "https://registry.npmmirror.com/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -831,6 +895,30 @@ rollup@^3.10.0:
   resolved "https://registry.npmmirror.com/rollup/-/rollup-3.17.3.tgz"
   integrity sha512-p5LaCXiiOL/wrOkj8djsIDFmyU9ysUxcyW+EKRLHb6TKldJzXpImjcRSR+vgo09DBdofGcOoLOsRyxxG2n5/qQ==
   optionalDependencies:
+    fsevents "~2.3.2"
+
+rollup@^4.8.0:
+  version "4.14.1"
+  resolved "https://registry.npmmirror.com/rollup/-/rollup-4.14.1.tgz"
+  integrity sha512-4LnHSdd3QK2pa1J6dFbfm1HN0D7vSK/ZuZTsdyUAlA6Rr1yTouUTL13HaDOGJVgby461AhrNGBS7sCGXXtT+SA==
+  dependencies:
+    "@types/estree" "1.0.5"
+  optionalDependencies:
+    "@rollup/rollup-android-arm-eabi" "4.14.1"
+    "@rollup/rollup-android-arm64" "4.14.1"
+    "@rollup/rollup-darwin-arm64" "4.14.1"
+    "@rollup/rollup-darwin-x64" "4.14.1"
+    "@rollup/rollup-linux-arm-gnueabihf" "4.14.1"
+    "@rollup/rollup-linux-arm64-gnu" "4.14.1"
+    "@rollup/rollup-linux-arm64-musl" "4.14.1"
+    "@rollup/rollup-linux-powerpc64le-gnu" "4.14.1"
+    "@rollup/rollup-linux-riscv64-gnu" "4.14.1"
+    "@rollup/rollup-linux-s390x-gnu" "4.14.1"
+    "@rollup/rollup-linux-x64-gnu" "4.14.1"
+    "@rollup/rollup-linux-x64-musl" "4.14.1"
+    "@rollup/rollup-win32-arm64-msvc" "4.14.1"
+    "@rollup/rollup-win32-ia32-msvc" "4.14.1"
+    "@rollup/rollup-win32-x64-msvc" "4.14.1"
     fsevents "~2.3.2"
 
 scheduler@^0.21.0:
@@ -939,6 +1027,11 @@ utility-types@^3.10.0:
   resolved "https://registry.npmmirror.com/utility-types/-/utility-types-3.10.0.tgz"
   integrity sha512-O11mqxmi7wMKCo6HKFt5AhO4BwY3VV68YU07tgxfz8zJTIxr4BpsezN49Ffwy9j3ZpwwJp4fkRwjRzq3uWE6Rg==
 
+uuid@^8.3.2:
+  version "8.3.2"
+  resolved "https://registry.npmmirror.com/uuid/-/uuid-8.3.2.tgz"
+  integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
 vite@^4.1.0, vite@^4.1.0-beta.0:
   version "4.1.4"
   resolved "https://registry.npmmirror.com/vite/-/vite-4.1.4.tgz"
@@ -965,6 +1058,11 @@ yallist@^3.0.2:
   version "3.1.1"
   resolved "https://registry.npmmirror.com/yallist/-/yallist-3.1.1.tgz"
   integrity sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==
+
+zod@^3.9.8:
+  version "3.22.4"
+  resolved "https://registry.npmmirror.com/zod/-/zod-3.22.4.tgz"
+  integrity sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==
 
 zustand@^3.5.13, zustand@^3.7.1:
   version "3.7.2"
