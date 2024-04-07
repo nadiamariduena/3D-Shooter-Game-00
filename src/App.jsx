@@ -12,3 +12,11 @@ function App() {
 }
 
 export default App;
+
+/*
+
+fov:
+Field of view (FOV) is the open, observable area a person can see through their eyes or via an optical device, such as a camera. In the case of optical devices, FOV is the maximum area that the device can capture. In other words, it answers the question: "How much can the device see?"
+
+
+*/
