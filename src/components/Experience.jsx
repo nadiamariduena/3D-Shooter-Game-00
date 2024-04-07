@@ -38,6 +38,9 @@ export const Experience = () => {
       // copy the above and use it for the new player
       const newPlayer = { state, joystick };
       state.setState("health", 100);
+      state.setState("deaths", 0);
+      state.setState("kills", 0);
+      setPlayers((players) => [...players, newPlayer]);
     });
     //
     //
