@@ -35,11 +35,12 @@ export const Experience = () => {
         // to shoot
         buttons: [{ id: "fire", label: "fire" }],
       });
-      // copy the above and use it for the new player
+      // copy the above and use it for the new player (the state & joystick carries it)
       const newPlayer = { state, joystick };
       state.setState("health", 100);
       state.setState("deaths", 0);
       state.setState("kills", 0);
+      // ** Adding the new player to the existing array of players
       setPlayers((players) => [...players, newPlayer]);
       //* when the user quits the session */
       state.onQuit(() => {
@@ -49,7 +50,7 @@ export const Experience = () => {
     //
     //
   }, []);
-  // -------------------
+  //
   //
   //
   //
