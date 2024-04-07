@@ -7,14 +7,15 @@ export const Experience = () => {
   //
   //
 
+  // LOG ROOM/session ----
   const start = async () => {
     await insertCoin();
   };
-
-  //
   useEffect(() => {
     start();
   }, []);
+  // -------------------
+  //
   //
   //
   return (
