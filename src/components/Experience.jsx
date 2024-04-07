@@ -18,7 +18,8 @@ export const Experience = () => {
     // ** Players handler
     onPlayerJoin((state) => {
       //------------
-      // The JOYSTICK, it replaces the arrows or the keys to move the player
+      // 🟠 The JOYSTICK, it replaces the arrows or the keys to move the player
+      // once you enter on the link, you will have some examples, click on the "launch", to test it
       // https://docs.joinplayroom.com/components/joystick
       //------------
       //
