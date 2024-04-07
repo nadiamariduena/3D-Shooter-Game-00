@@ -32,6 +32,8 @@ export const Experience = () => {
       const joystick = new Joystick(state, {
         //Use type: ANGULAR to rotate at 360deg
         type: "angular",
+        // to shoot
+        buttons: [{ id: "fire", label: "fire" }],
       });
     });
     //
