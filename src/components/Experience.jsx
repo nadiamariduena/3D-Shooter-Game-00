@@ -30,7 +30,8 @@ export const Experience = () => {
       // For others, it will only sync their state
 
       const joystick = new Joystick(state, {
-        //
+        //Use type: ANGULAR to rotate at 360deg
+        type: "angular",
       });
     });
     //
