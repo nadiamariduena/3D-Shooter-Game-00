@@ -1,4 +1,4 @@
-import { OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls } from "@react-three/drei";
 import { Map } from "./Map";
 
 export const Experience = () => {
@@ -6,6 +6,7 @@ export const Experience = () => {
     <>
       <OrbitControls />
       <Map />
+      <Environment preset="sunset" />
     </>
   );
 };
