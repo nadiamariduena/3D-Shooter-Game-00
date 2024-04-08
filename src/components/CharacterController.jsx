@@ -14,11 +14,17 @@ export const CharacterController = ({
   const group = useRef();
   const character = useRef();
   //
+  const [animation, setAnimation] = useState("Idle");
+  //
   //
   return (
     <group ref={group}>
       <group ref={character}>
-        <CharacterSoldier />
+        <CharacterSoldier
+          // bring the props from the CharacterSoldier.jsx line 40
+          color={state.state.profile?.color}
+          animation={animation}
+        />
       </group>
     </group>
   );
