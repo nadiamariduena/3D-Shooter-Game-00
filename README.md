@@ -1,3 +1,30 @@
+
+<br>
+
+
+# 🦄 Default 🌻
+
+#### In this branch you will find:
+
+
+- default set up scene/env (camera pos etc)
+- character set up
+- props character
+- character controller (just the char without movement, We will see that on the next branch)
+- 
+<br>
+
+https://github.com/nadiamariduena/3D-Shooter-Game-00/assets/58809268/dd2e775d-4840-486b-a483-dc5c8b0b95b6
+
+
+<br>
+<br>
+
+---
+
+
+<br>
+
 # r3f-vite-starter
 A boilerplate to build R3F projects
 
