@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { CharacterSoldier } from "./CharacterSoldier";
 
 export const CharacterController = ({
@@ -18,7 +18,7 @@ export const CharacterController = ({
   //
   //
   return (
-    <group ref={group}>
+    <group ref={group} {...props}>
       <group ref={character}>
         <CharacterSoldier
           // bring the props from the CharacterSoldier.jsx line 40
