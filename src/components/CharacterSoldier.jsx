@@ -88,9 +88,11 @@ export function CharacterSoldier({
     // ASSIGNING CHARACTER COLOR
     nodes.Body.traverse((child) => {
       if (child.isMesh && child.material.name === "Character_Main") {
+        //**  check line 18465 on the Character_Soldier.gltf, look for Character_Main, there you will find the characters materials such as the roughness, pbrMetallicRoughness
         child.material = playerColorMaterial;
       }
       if (child.isMesh) {
+        // shadow of the character
         child.castShadow = true;
         child.receiveShadow = true;
       }
