@@ -46,18 +46,26 @@ export function CharacterSoldier({
   const { scene, materials, animations } = useGLTF(
     "/models/Character_Soldier.gltf"
   );
+
+  //-----------
+  // The mesh is reusable, as we will have several players and it makes not sense remove it entirely once a player dies, that is why we clone it
+  //
   // Skinned meshes cannot be re-used in threejs without cloning them
   const clone = useMemo(() => SkeletonUtils.clone(scene), [scene]);
+  //
   // useGraph creates two flat object collections for nodes and materials
   const { nodes } = useGraph(clone);
   const { actions } = useAnimations(animations, group);
   //
   //
   if (actions["Death"]) {
+    //
+    // once its dead, it stays in dead position
     actions["Death"].loop = LoopOnce;
+    //
     actions["Death"].clampWhenFinished = true;
   }
-
+  //  the fading connected to the character appearing or dying
   useEffect(() => {
     actions[animation].reset().fadeIn(0.2).play();
     return () => actions[animation]?.fadeOut(0.2);
