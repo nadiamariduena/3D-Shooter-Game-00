@@ -14,6 +14,11 @@
 - 
 <br>
 
+![preview-default](https://github.com/nadiamariduena/3D-Shooter-Game-00/assets/58809268/0acd0c37-cc51-4794-9145-65feafad9802)
+
+
+<br>
+
 https://github.com/nadiamariduena/3D-Shooter-Game-00/assets/58809268/dd2e775d-4840-486b-a483-dc5c8b0b95b6
 
 
