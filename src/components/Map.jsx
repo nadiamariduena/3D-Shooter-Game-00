@@ -18,7 +18,7 @@ export const Map = () => {
   //
   // https://rapier.rs/docs/user_guides/javascript/colliders/
   return (
-    <RigidBody colliders="trimesh">
+    <RigidBody colliders="trimesh" type="fixed">
       {/* After adding the colliders , the map will fall */}
       <primitive object={map.scene} />
     </RigidBody>

@@ -21,7 +21,7 @@ function App() {
           https://www.youtube.com/watch?v=Y3xkgpCukow
       */}
       <Suspense>
-        <Physics>
+        <Physics debug>
           <Experience />
         </Physics>
       </Suspense>
