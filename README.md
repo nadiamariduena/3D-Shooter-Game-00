@@ -1,9 +1,5 @@
 ## 🚀 Adding the animation to the character
 
-
-https://github.com/nadiamariduena/3D-Shooter-Game-00/assets/58809268/36e89ae6-fe37-492f-9d5f-f86baa620e1b
-
-
 <br>
 
 ---
