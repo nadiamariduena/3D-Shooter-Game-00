@@ -1,3 +1,4 @@
+import { CapsuleCollider, RigidBody } from "@react-three/rapier";
 import { useRef, useState } from "react";
 import { CharacterSoldier } from "./CharacterSoldier";
 
@@ -19,13 +20,17 @@ export const CharacterController = ({
   //
   return (
     <group ref={group} {...props}>
-      <group ref={character}>
-        <CharacterSoldier
-          // bring the props from the CharacterSoldier.jsx line 40
-          color={state.state.profile?.color}
-          animation={animation}
-        />
-      </group>
+      <RigidBody colliders={false}>
+        <group ref={character}>
+          <CharacterSoldier
+            // bring the props from the CharacterSoldier.jsx line 40
+            color={state.state.profile?.color}
+            animation={animation}
+          />
+        </group>
+        {/* the CapsuleCollider  will wrap the actual character */}
+        <CapsuleCollider args={[0.7, 0.6]} position={[0, 1.28, 0]} />
+      </RigidBody>
     </group>
   );
   //
