@@ -14,6 +14,8 @@ function App() {
       {/*  ✋ wrapping the "Experience" with a suspense and then with the physics
 
           the purpose of the suspense: `<Suspense>` lets you display a fallback until its children have finished loading.
+
+          After the suspense and the physics you will need to add the Rigid Body with a collider type
       */}
       <Suspense>
         <Physics>
