@@ -11,8 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
-#
+# hidden mds
 readme_00.md
+readme_01_animacharacter.md
+
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
