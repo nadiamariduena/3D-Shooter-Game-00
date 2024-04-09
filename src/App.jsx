@@ -16,6 +16,9 @@ function App() {
           the purpose of the suspense: `<Suspense>` lets you display a fallback until its children have finished loading.
 
           After the suspense and the physics you will need to add the Rigid Body with a collider type
+
+          Rigidbody in Unity - Everything You Need to Know
+          https://www.youtube.com/watch?v=Y3xkgpCukow
       */}
       <Suspense>
         <Physics>
