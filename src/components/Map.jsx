@@ -1,4 +1,5 @@
 import { useGLTF } from "@react-three/drei";
+import { RigidBody } from "@react-three/rapier";
 import { useEffect } from "react";
 
 export const Map = () => {
@@ -15,8 +16,13 @@ export const Map = () => {
   });
 
   //
-  //
-  return <primitive object={map.scene} />;
+  // https://rapier.rs/docs/user_guides/javascript/colliders/
+  return (
+    <RigidBody colliders="trimesh">
+      {/* After adding the colliders , the map will fall */}
+      <primitive object={map.scene} />
+    </RigidBody>
+  );
 };
 
 useGLTF.preload("models/map.glb");
