@@ -34,7 +34,16 @@ export const CharacterController = ({
         y: 0,
         z: Math.cos(angle) * MOVEMENT_SPEED * delta,
       };
+      //
+      rigidbody.current.applyImpulse(impulse, true);
+
+      //
+    } else {
+      //
+      //
     }
+    //
+    //
   });
 
   //
