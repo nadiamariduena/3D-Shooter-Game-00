@@ -18,6 +18,7 @@ export const CharacterController = ({
   //
   // ** to move the character
   const rigidbody = useRef();
+  // BY DEFAULT we have the IDLE animation, then when the character will move, the naim will change to RUN
   const [animation, setAnimation] = useState("Idle");
   //
   //
