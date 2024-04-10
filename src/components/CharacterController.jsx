@@ -47,6 +47,8 @@ export const CharacterController = ({
       //
     } else {
       //
+      // set the anim to default if the user isn't using the joystick
+      setAnimation("Idle");
       //
     }
     //
