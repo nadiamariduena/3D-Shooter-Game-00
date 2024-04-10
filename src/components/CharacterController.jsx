@@ -59,7 +59,7 @@ export const CharacterController = ({
   //
   return (
     <group ref={group} {...props}>
-      <RigidBody ref={rigidbody} colliders={false}>
+      <RigidBody ref={rigidbody} colliders={false} linearDamping={12}>
         <group ref={character}>
           <CharacterSoldier
             // bring the props from the CharacterSoldier.jsx line 40
