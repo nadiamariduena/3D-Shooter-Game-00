@@ -3,6 +3,12 @@ import { CapsuleCollider, RigidBody } from "@react-three/rapier";
 import { useRef, useState } from "react";
 import { CharacterSoldier } from "./CharacterSoldier";
 
+//
+//
+const MOVEMENT_SPEED = 200;
+//
+//
+
 export const CharacterController = ({
   state,
   joystick,
@@ -22,7 +28,7 @@ export const CharacterController = ({
   const [animation, setAnimation] = useState("Idle");
   //
   //
-  useFrame(() => {
+  useFrame((_, delta) => {
     // update player position
     const angle = joystick.angle();
     if (joystick.isJoystickPressed() && angle) {
