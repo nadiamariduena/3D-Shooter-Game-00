@@ -4,6 +4,10 @@
 
 - Test the progress: [here 🦄](https://game00-work-in-progress.netlify.app/)
 
+
+https://github.com/nadiamariduena/3D-Shooter-Game-00/assets/58809268/b364ad36-5350-4369-a5c2-7c8308f28272
+
+
 <br>
 <br>
 <br>
