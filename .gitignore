@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 # hidden mds
+read_TIPS.md
 readme_00.md
 readme_01_animacharacter.md
 readme_02_moveCamera-along-with-Char.md

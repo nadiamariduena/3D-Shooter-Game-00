@@ -56,12 +56,13 @@ export const CharacterController = ({
       const playerWorldPos = vec3(rigidbody.current.translation());
 
       //  ** 4
-      // using the setLookAt method,  to define where our camera
+      // using the setLookAt method,  to define where our camera is
       controls.current.setLookAt(
         playerWorldPos.x,
         playerWorldPos.y + (state.state.dead ? 12 : cameraDistanceY),
         playerWorldPos.z + (state.state.dead ? 2 : cameraDistanceZ),
         //
+        // to look at the character POS
         playerWorldPos.x,
         playerWorldPos.y + 1.5,
         playerWorldPos.z,
