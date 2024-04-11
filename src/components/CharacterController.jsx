@@ -1,6 +1,6 @@
 import { CameraControls } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { CapsuleCollider, RigidBody } from "@react-three/rapier";
+import { CapsuleCollider, RigidBody, vec3 } from "@react-three/rapier";
 import { isHost } from "playroomkit";
 import { useRef, useState } from "react";
 import { CharacterSoldier } from "./CharacterSoldier";
@@ -24,13 +24,16 @@ export const CharacterController = ({
 
   const group = useRef();
   const character = useRef();
-  // camera will follow the character
-  const controls = useRef();
+
   //
   //
   // ** to move the character
   const rigidbody = useRef();
   // BY DEFAULT we have the IDLE animation, then when the character will move, the naim will change to RUN
+  //
+  //
+  // camera will follow the character
+  const controls = useRef();
   const [animation, setAnimation] = useState("Idle");
   //
   //
@@ -42,22 +45,30 @@ export const CharacterController = ({
     In the context of a 3D graphics application, these values could represent units of measurement such as meters or feet, depending on the scale of the scene. For example, if the scene is modeled to represent real-world dimensions
 
     */
-    // ** 1 ---- mob
-    const cameraDistanceY = window.innerWidth < 1024 ? 16 : 20; //  If the width of the window (window.innerWidth) is less than 1024 pixels, then cameraDistanceY will be set to 16, otherwise, it will be set to 20.
-    // ** 2 --- mob
-    const cameraDistanceZ = window.innerWidth < 1024 ? 12 : 16; // If the width of the window (window.innerWidth) is less than 1024 pixels, then cameraDistanceZ will be set to 12, otherwise, it will be set to 16.
-    //
-    // ** 3 ---
-    // VEC3 is a method from @react-three/rapier TO CONVERT it from rapier to physics to threejs
-    const playerWorldPos = vec3(rigidbody.current.translation());
-    //
-    //  ** 4
-    // using the setLookAt method,  to define where our camera
-    controls.current.setLookAt(
-      playerWorldPos.x,
-      playerWorldPos.y + (state.state.dead ? 12 : cameraDistanceY),
-      playerWorldPos.z + (state.state.dead ? 2 : cameraDistanceZ)
-    );
+    if (controls.current) {
+      // ** 1 ---- mob
+      const cameraDistanceY = window.innerWidth < 1024 ? 16 : 20; //  If the width of the window (window.innerWidth) is less than 1024 pixels, then cameraDistanceY will be set to 16, otherwise, it will be set to 20.
+      // ** 2 --- mob
+      const cameraDistanceZ = window.innerWidth < 1024 ? 12 : 16; // If the width of the window (window.innerWidth) is less than 1024 pixels, then cameraDistanceZ will be set to 12, otherwise, it will be set to 16.
+      //
+      // ** 3 ---
+      // VEC3 is a method from @react-three/rapier TO CONVERT it from rapier to physics to threejs
+      const playerWorldPos = vec3(rigidbody.current.translation());
+
+      //  ** 4
+      // using the setLookAt method,  to define where our camera
+      controls.current.setLookAt(
+        playerWorldPos.x,
+        playerWorldPos.y + (state.state.dead ? 12 : cameraDistanceY),
+        playerWorldPos.z + (state.state.dead ? 2 : cameraDistanceZ),
+        //
+        playerWorldPos.x,
+        playerWorldPos.y + 1.5,
+        playerWorldPos.z,
+        //
+        true
+      );
+    }
 
     //------ camera controls
     //
