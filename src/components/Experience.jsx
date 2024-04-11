@@ -72,8 +72,8 @@ export const Experience = () => {
         shadow-bias={-0.0001}
       />
 
-      {/*  */}
-      <OrbitControls />
+      {/*   <OrbitControls /> */}
+
       <Map />
 
       {players.map(({ state, joystick }, idx) => (

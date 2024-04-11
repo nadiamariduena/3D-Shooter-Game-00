@@ -24,7 +24,8 @@ export const CharacterController = ({
 
   const group = useRef();
   const character = useRef();
-
+  // camera will follow the character
+  const controls = useRef();
   //
   //
   // ** to move the character
@@ -35,7 +36,16 @@ export const CharacterController = ({
   //
   useFrame((_, delta) => {
     //
+    //------ camera controls
+    /*
+    16 : 20 etc ...
+    In the context of a 3D graphics application, these values could represent units of measurement such as meters or feet, depending on the scale of the scene. For example, if the scene is modeled to represent real-world dimensions
 
+    */
+    const cameraDistanceY = window.innerWidth < 1024 ? 16 : 20; //  If the width of the window (window.innerWidth) is less than 1024 pixels, then cameraDistanceY will be set to 16, otherwise, it will be set to 20.
+    const cameraDistanceZ = window.innerWidth < 1024 ? 12 : 16; // If the width of the window (window.innerWidth) is less than 1024 pixels, then cameraDistanceZ will be set to 12, otherwise, it will be set to 16.
+    //------ camera controls
+    //
     // update player position
     const angle = joystick.angle();
     if (joystick.isJoystickPressed() && angle) {
@@ -82,6 +92,14 @@ export const CharacterController = ({
   //
   return (
     <group ref={group} {...props}>
+      {/*  NEW CAMERA */}
+
+      {userPlayer && <CameraControls ref={controls} />}
+
+      {/*
+
+
+     */}
       <RigidBody
         ref={rigidbody}
         colliders={false}
