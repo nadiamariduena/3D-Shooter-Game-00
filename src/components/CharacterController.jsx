@@ -1,5 +1,6 @@
 import { useFrame } from "@react-three/fiber";
 import { CapsuleCollider, RigidBody } from "@react-three/rapier";
+import { isHost } from "playroomkit";
 import { useRef, useState } from "react";
 import { CharacterSoldier } from "./CharacterSoldier";
 
@@ -10,6 +11,7 @@ const MOVEMENT_SPEED = 200;
 //
 
 export const CharacterController = ({
+  // the state comes from the Experience.jsx comp
   state,
   joystick,
   //   the user identifier
@@ -51,8 +53,24 @@ export const CharacterController = ({
       setAnimation("Idle");
       //
     }
+
     //
+    // ** ---- pos
+    // the isHost comes from "playroomkit";
+    if (isHost()) {
+      //
+      state.setState("pos", rigidbody.current.translation());
+      //
+    } else {
+      // if we are not the host, we will get the POS from the state
+      const pos = state.getState("pos");
+      // and if we find one we apply it to the rigid body
+      if (pos) {
+        rigidbody.current.setTranslation(pos);
+      }
+    }
     //
+    // ---- pos
   });
 
   //
@@ -66,6 +84,9 @@ export const CharacterController = ({
         linearDamping={20}
         // will stop the character rotation
         lockRotations
+        // checking if I am the host
+        // ** the isHost comes from "playroomkit";
+        type={isHost() ? "dynamic" : "kinematicPosition"}
       >
         <group ref={character}>
           <CharacterSoldier
