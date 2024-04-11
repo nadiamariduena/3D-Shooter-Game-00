@@ -39,13 +39,6 @@ https://github.com/nadiamariduena/3D-Shooter-Game-00/assets/58809268/dd2e775d-48
 
 <br>
 
-# r3f-vite-starter
+# ABOUT
 
-A boilerplate to build R3F projects
-
-```
-yarn
-yarn dev
-```
-
-![image](https://user-images.githubusercontent.com/6551176/221732091-23ee52cb-4150-42fa-b998-43628d7a6b0d.png)
+### 🌈 This project is a 3D multiplayer mobile shooter game built using Playroom and React Three Fiber, offering immersive gameplay experiences on mobile devices.
