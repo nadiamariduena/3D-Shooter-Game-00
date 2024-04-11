@@ -1,3 +1,4 @@
+import { CameraControls } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { CapsuleCollider, RigidBody } from "@react-three/rapier";
 import { isHost } from "playroomkit";
@@ -23,6 +24,9 @@ export const CharacterController = ({
 
   const group = useRef();
   const character = useRef();
+  // camera will follow the character
+  const controls = useRef();
+  //
   //
   // ** to move the character
   const rigidbody = useRef();
@@ -31,6 +35,11 @@ export const CharacterController = ({
   //
   //
   useFrame((_, delta) => {
+    //
+    //------ camera controls
+
+    //------ camera controls
+    //
     // update player position
     const angle = joystick.angle();
     if (joystick.isJoystickPressed() && angle) {
@@ -77,6 +86,14 @@ export const CharacterController = ({
   //
   return (
     <group ref={group} {...props}>
+      {/*  NEW CAMERA */}
+
+      {userPlayer && <CameraControls ref={controls} />}
+
+      {/*
+
+
+     */}
       <RigidBody
         ref={rigidbody}
         colliders={false}
