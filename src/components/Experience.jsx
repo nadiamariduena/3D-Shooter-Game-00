@@ -85,6 +85,9 @@ export const Experience = () => {
           state={state}
           joystick={joystick}
           userPlayer={state.id === myPlayer()?.id}
+          //
+          //
+          onFire={onFire}
         />
       ))}
 
