@@ -115,7 +115,20 @@ export const CharacterController = ({
 
     //
     //
-    // Check if fire button is pressed
+    //** 🚀 Check if fire button is pressed
+    if (joystick.isPressed("fire")) {
+      // 1 if it's pressed, then set the idle_shoot anim
+      setAnimation("Idle_Shoot");
+      //2 only if its the "host" he will be able to do use the physics logic
+      if (isHost()) {
+        // 3 chech the date of the last fire, so that we can shoot like 100 bullets  at the same time
+        //
+        if (Date.now() - lastShoot.current > FIRE_RATE) {
+          lastShoot.current = DATE.now();
+        }
+      }
+      //
+    }
 
     //
     //
