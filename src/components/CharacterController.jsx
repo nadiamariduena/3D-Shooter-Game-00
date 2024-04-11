@@ -8,6 +8,8 @@ import { CharacterSoldier } from "./CharacterSoldier";
 //
 //
 const MOVEMENT_SPEED = 200;
+// 7
+const FIRE_RATE = 380;
 //
 //
 
@@ -17,6 +19,9 @@ export const CharacterController = ({
   joystick,
   //   the user identifier
   userPlayer,
+  // 8 after this, add a reference to know when was the last time we fired
+  onFire,
+  //
   //the rest of the props
   ...props
 }) => {
@@ -34,6 +39,11 @@ export const CharacterController = ({
   //
   // camera will follow the character
   const controls = useRef();
+  // 9 ref to know when was the last time we fired, after this go to the Experience.jsx
+  const lastShoot = useRef(0);
+
+  //
+  //
   const [animation, setAnimation] = useState("Idle");
   //
   //
@@ -121,10 +131,25 @@ export const CharacterController = ({
       setAnimation("Idle_Shoot");
       //2 only if its the "host" he will be able to do use the physics logic
       if (isHost()) {
-        // 3 chech the date of the last fire, so that we can shoot like 100 bullets  at the same time
+        // 3 check the date of the last fire, so that we can shoot like 100 bullets  at the same time
         //
         if (Date.now() - lastShoot.current > FIRE_RATE) {
+          // 4 then we define the last Shoot date (you have to create a new ref for that)
           lastShoot.current = DATE.now();
+          //
+          //
+          // 5 then we create a NEW bullet
+          // we add an ID, so that we will be able to map it and avoid RENDER issues
+          //
+          const newBullet = {
+            id: state.id + "-" + +new Date(),
+            position: vec3(rigidbody.current.translation()),
+            angle,
+            // save whos player is firing (later we will be able to count the score and know "who" killed who)
+            player: state.id,
+          };
+          // 6 call the "onFire" method, so to add the BULLET to the list of bullets, after this define the FIRE rate on zop of this comp
+          onFire(newBullet);
         }
       }
       //
