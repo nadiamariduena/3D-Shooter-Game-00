@@ -42,8 +42,23 @@ export const CharacterController = ({
     In the context of a 3D graphics application, these values could represent units of measurement such as meters or feet, depending on the scale of the scene. For example, if the scene is modeled to represent real-world dimensions
 
     */
+    // ** 1 ---- mob
     const cameraDistanceY = window.innerWidth < 1024 ? 16 : 20; //  If the width of the window (window.innerWidth) is less than 1024 pixels, then cameraDistanceY will be set to 16, otherwise, it will be set to 20.
+    // ** 2 --- mob
     const cameraDistanceZ = window.innerWidth < 1024 ? 12 : 16; // If the width of the window (window.innerWidth) is less than 1024 pixels, then cameraDistanceZ will be set to 12, otherwise, it will be set to 16.
+    //
+    // ** 3 ---
+    // VEC3 is a method from @react-three/rapier TO CONVERT it from rapier to physics to threejs
+    const playerWorldPos = vec3(rigidbody.current.translation());
+    //
+    //  ** 4
+    // using the setLookAt method,  to define where our camera
+    controls.current.setLookAt(
+      playerWorldPos.x,
+      playerWorldPos.y + (state.state.dead ? 12 : cameraDistanceY),
+      playerWorldPos.z + (state.state.dead ? 2 : cameraDistanceZ)
+    );
+
     //------ camera controls
     //
     // update player position
