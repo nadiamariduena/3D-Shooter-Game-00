@@ -111,8 +111,14 @@ export const CharacterController = ({
         rigidbody.current.setTranslation(pos);
       }
     }
-    //
     // ---- pos
+
+    //
+    //
+    // Check if fire button is pressed
+
+    //
+    //
   });
 
   //
