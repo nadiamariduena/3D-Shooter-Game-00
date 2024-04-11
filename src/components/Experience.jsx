@@ -73,7 +73,7 @@ export const Experience = () => {
       />
 
       {/*  */}
-      {/* <OrbitControls /> */}
+      <OrbitControls />
       <Map />
 
       {players.map(({ state, joystick }, idx) => (

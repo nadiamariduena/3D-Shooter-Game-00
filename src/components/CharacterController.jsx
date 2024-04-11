@@ -24,8 +24,7 @@ export const CharacterController = ({
 
   const group = useRef();
   const character = useRef();
-  // camera will follow the character
-  const controls = useRef();
+
   //
   //
   // ** to move the character
@@ -36,10 +35,7 @@ export const CharacterController = ({
   //
   useFrame((_, delta) => {
     //
-    //------ camera controls
 
-    //------ camera controls
-    //
     // update player position
     const angle = joystick.angle();
     if (joystick.isJoystickPressed() && angle) {
@@ -86,14 +82,6 @@ export const CharacterController = ({
   //
   return (
     <group ref={group} {...props}>
-      {/*  NEW CAMERA */}
-
-      {userPlayer && <CameraControls ref={controls} />}
-
-      {/*
-
-
-     */}
       <RigidBody
         ref={rigidbody}
         colliders={false}
