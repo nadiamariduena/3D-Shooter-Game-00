@@ -8,6 +8,16 @@ export const Experience = () => {
   //
   // ** Players
   const [players, setPlayers] = useState([]);
+  // 11 by default it s empty
+  const [bullets, setBullets] = useState([]);
+  //  12
+  const onFire = (bullet) => {
+    // Setting the bullets to the previous bullets array with the new one
+    setBullets((bullets) => [...bullets, bullet]);
+    //
+  };
+  //
+  //
   //
   // ** LOG ROOM/session ----
   const start = async () => {
@@ -86,7 +96,7 @@ export const Experience = () => {
           joystick={joystick}
           userPlayer={state.id === myPlayer()?.id}
           //
-          //
+          // 10 after this, create the list of bullets at the top of this comp
           onFire={onFire}
         />
       ))}
