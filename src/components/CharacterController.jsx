@@ -85,6 +85,7 @@ export const CharacterController = ({
     //
     // update player position
     const angle = joystick.angle();
+    //
     if (joystick.isJoystickPressed() && angle) {
       setAnimation("Run");
       character.current.rotation.y = angle;
