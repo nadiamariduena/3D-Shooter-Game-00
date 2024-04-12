@@ -20,9 +20,9 @@ export const Experience = () => {
   //
   // 14
   const onHit = (bulletId) => {
-    // we will set the bullet to the previous array of bullets filtered with the one that has been hit, so it will make it disappear from our array
+    // we will set the bullet to the previous array of bullets filtered with the one that has been hit, so it will make it disappear from our array.
     setBullets((bullets) => bullets.filter((b) => b.id !== bulletId));
-    //
+    // after this create the comp  Bullet
   };
   //
   //
