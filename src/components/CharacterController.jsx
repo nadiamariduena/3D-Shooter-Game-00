@@ -168,10 +168,6 @@ export const CharacterController = ({
 
       {userPlayer && <CameraControls ref={controls} />}
 
-      {/*
-
-
-     */}
       <RigidBody
         ref={rigidbody}
         colliders={false}
