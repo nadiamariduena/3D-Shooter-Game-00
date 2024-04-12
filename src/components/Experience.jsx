@@ -1,6 +1,7 @@
 import { Environment, OrbitControls } from "@react-three/drei";
 import { insertCoin, Joystick, myPlayer, onPlayerJoin } from "playroomkit";
 import { useEffect, useState } from "react";
+import { Bullet } from "./Bullet";
 import { CharacterController } from "./CharacterController";
 import { Map } from "./Map";
 

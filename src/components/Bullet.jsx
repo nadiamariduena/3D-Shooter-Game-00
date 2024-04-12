@@ -1,6 +1,12 @@
 import { RigidBody } from "@react-three/rapier";
-import React from "react";
+import { useEffect, useRef } from "react";
 
+//24
+const BULLET_SPEED = 20;
+//  AFTER defining the bullet speed , go back to the Experience.jsx and import the BUllet
+
+//
+//
 //15
 const bulletMaterial = new MeshBasicMaterial({
   color: "hotpink",
@@ -33,6 +39,10 @@ export const Bullet = ({
       y: 0,
       z: Math.cos(angle) * BULLET_SPEED,
     };
+    // 23
+    //Defining the linear velocity because its a fixed speed for the bullet, after this, go to the top and define the Bullet speed.
+    rigidbody.current.setLinvel(velocity, true);
+    //SETLINVEL: https://rapier.rs/docs/user_guides/javascript/rigid_bodies/
   }, []);
 
   //
