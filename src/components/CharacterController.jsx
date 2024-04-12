@@ -136,7 +136,7 @@ export const CharacterController = ({
         //
         if (Date.now() - lastShoot.current > FIRE_RATE) {
           // 4 then we define the last Shoot date (you have to create a new ref for that)
-          lastShoot.current = DATE.now();
+          lastShoot.current = Date.now();
           //
           //
           // 5 then we create a NEW bullet

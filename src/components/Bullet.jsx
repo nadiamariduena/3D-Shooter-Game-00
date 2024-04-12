@@ -1,5 +1,6 @@
 import { RigidBody } from "@react-three/rapier";
 import { useEffect, useRef } from "react";
+import { MeshBasicMaterial } from "three";
 
 //24
 const BULLET_SPEED = 20;
