@@ -8,15 +8,22 @@ export const Experience = () => {
   //
   // ** Players
   const [players, setPlayers] = useState([]);
+  //
+  // ** Bullets
   // 11 by default it s empty
   const [bullets, setBullets] = useState([]);
   //  12
   const onFire = (bullet) => {
-    // Setting the bullets to the previous bullets array with the new one
+    // Setting the bullets to the previous bullets array with the new one. after this you will render the bullets, scroll down to step 13
     setBullets((bullets) => [...bullets, bullet]);
-    //
   };
   //
+  // 14
+  const onHit = (bulletId) => {
+    // we will set the bullet to the previous array of bullets filtered with the one that has been hit, so it will make it disappear from our array
+    setBullets((bullets) => bullets.filter((b) => b.id !== bulletId));
+    //
+  };
   //
   //
   // ** LOG ROOM/session ----
@@ -101,6 +108,17 @@ export const Experience = () => {
         />
       ))}
 
+      {/* 13 */}
+      {bullets.map((bullet) => (
+        <Bullet
+          //we haven created the Bullet component yet
+          key={bullet.id}
+          {...bullet}
+          //
+          //to know when we will make the bullet disappear
+          onHit={() => onHit(bullet.id)}
+        />
+      ))}
       <Environment preset="sunset" />
     </>
   );
