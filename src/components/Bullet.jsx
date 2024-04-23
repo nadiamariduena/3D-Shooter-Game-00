@@ -68,8 +68,6 @@ export const Bullet = ({
           ref={rigidbody}
           // 30 to avoid the gravity on it
           gravityScale={0}
-          //  31 to prevent the impact when hitting  another player
-          sensor
           // 32 add the logic when it hits SOMETHING
           onIntersectionEnter={(e) => {
             // only the Host has the permission for the rigidBody, and if the other items ISNT a bullet(because I dont have any relation with a bullet hitting another bullet(optional) )
@@ -81,6 +79,8 @@ export const Bullet = ({
               onHit(vec3(rigidbody.current.translation()));
             }
           }}
+          //  31 to prevent the impact when hitting  another player
+          sensor
           //34 i also need to add some user data
           userData={{
             type: "bullet",
