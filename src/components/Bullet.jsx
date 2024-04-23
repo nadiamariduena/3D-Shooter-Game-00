@@ -55,7 +55,8 @@ export const Bullet = ({
       position={[position.x, position.y, position.z]}
       rotation-y={angle}
     >
-      //27 Wrap the bullet RIGID
+      //27 Wrap the bullet RIGID - go back to the CharacterController.jsx and
+      implement the CrossHair
       <group
         position-x={WEAPON_OFFSET.x}
         position-y={WEAPON_OFFSET.y}
