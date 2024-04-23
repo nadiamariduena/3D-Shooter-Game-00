@@ -1,4 +1,5 @@
 import { SoftShadows } from "@react-three/drei";
+// 35
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import { Canvas } from "@react-three/fiber";
 import { Physics } from "@react-three/rapier";
@@ -26,7 +27,7 @@ function App() {
           <Experience />
         </Physics>
       </Suspense>
-
+      {/* 36 */}
       <EffectComposer disableNormalPass>
         <Bloom luminanceThreshold={1} intensity={1.5} mipmapBlur />
       </EffectComposer>

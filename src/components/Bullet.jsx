@@ -89,7 +89,7 @@ export const Bullet = ({
             // the damage of the bullet is hardcoded, but if you decide to have multiple weapons here it can be based on that
             damage: 10,
           }}
-          //35 install: npm i @react-three/postprocessing
+          //35 install: npm i @react-three/postprocessing, once installed go to the App.js
         >
           //22
           <mesh position-z={0.25} material={bulletMaterial} castShadow>
