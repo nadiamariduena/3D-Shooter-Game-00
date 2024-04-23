@@ -1,4 +1,4 @@
-import { RigidBody } from "@react-three/rapier";
+import { RigidBody, vec3 } from "@react-three/rapier";
 import { isHost } from "playroomkit";
 import { useEffect, useRef } from "react";
 import { MeshBasicMaterial } from "three";
@@ -77,8 +77,11 @@ export const Bullet = ({
               // then i will disable the gravity to prevent that
               rigidbody.current.setEnabled(false);
               // in other words, once a bullet do somthing its disabled
+              // 33 call it, and pass the position of where it was hit
+              onHit(vec3(rigidbody.current.translation()));
             }
           }}
+          //34 i also need to add some user data
         >
           //22
           <mesh position-z={0.25} material={bulletMaterial} castShadow>
