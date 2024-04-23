@@ -210,7 +210,7 @@ export const CharacterController = ({
 //
 // 28
 const Crosshair = (props) => {
-  //this will create a line of small boxes, that will help you to see the direction of the shooting
+  //this will create a line of small boxes that will help you to see the direction of the shooting
   return (
     <group {...props}>
       <mesh position-z={1}>
