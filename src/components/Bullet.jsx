@@ -65,6 +65,10 @@ export const Bullet = ({
         <RigidBody
           //   21
           ref={rigidbody}
+          // 30 to avoid the gravity on it
+          gravityScale={0}
+          //  31 to prevent the impact when hitting  another player
+          sensor
         >
           //22
           <mesh position-z={0.25} material={bulletMaterial} castShadow>

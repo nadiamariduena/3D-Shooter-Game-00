@@ -191,7 +191,7 @@ export const CharacterController = ({
             color={state.state.profile?.color}
             animation={animation}
           />
-          // crosshair 29
+          // crosshair 29, after this go to the BUllets.jsx
           {userPlayer && (
             <Crosshair
               // to set them at the right pos
