@@ -19,9 +19,9 @@ export const Experience = () => {
     setBullets((bullets) => [...bullets, bullet]);
   };
   //
-  // 14
+  // 15
   const onHit = (bulletId) => {
-    // we will set the bullet to the previous array of bullets filtered with the one that has been hit, so it will make it disappear from our array.
+    // we will set the bullet to the previous array of bullets, filtered with the one that has been hit, so it will make it disappear from our array.
     setBullets((bullets) => bullets.filter((b) => b.id !== bulletId));
     // after this create the comp  Bullet
   };
@@ -109,14 +109,14 @@ export const Experience = () => {
         />
       ))}
 
-      {/* 13 */}
+      {/* 13 render de fire*/}
       {bullets.map((bullet) => (
         <Bullet
           //we haven created the Bullet component yet
           key={bullet.id}
           {...bullet}
           //
-          //to know when we will make the bullet disappear
+          //14 to know when we will make the bullet disappear
           onHit={() => onHit(bullet.id)}
         />
       ))}
