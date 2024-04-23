@@ -82,6 +82,13 @@ export const Bullet = ({
             }
           }}
           //34 i also need to add some user data
+          userData={{
+            type: "bullet",
+            //pass the player ID
+            player,
+            // the damage of the bullet is hardcoded, but if you decide to have multiple weapons here it can be based on that
+            damage: 10,
+          }}
         >
           //22
           <mesh position-z={0.25} material={bulletMaterial} castShadow>
