@@ -2,7 +2,7 @@ import { RigidBody } from "@react-three/rapier";
 import { useEffect, useRef } from "react";
 import { MeshBasicMaterial } from "three";
 
-//24
+//25
 const BULLET_SPEED = 20;
 //  AFTER defining the bullet speed , go back to the Experience.jsx and import the BUllet
 

@@ -11,7 +11,12 @@ const MOVEMENT_SPEED = 200;
 // 7
 const FIRE_RATE = 380;
 //
-//
+// 25 to solve the bullet not being centered to the char
+export const WEAPON_OFFSET = {
+  x: -0.2,
+  y: 1.4,
+  z: 0.8,
+};
 
 export const CharacterController = ({
   // the state comes from the Experience.jsx comp
