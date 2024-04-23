@@ -1,6 +1,7 @@
 import { RigidBody } from "@react-three/rapier";
 import { useEffect, useRef } from "react";
 import { MeshBasicMaterial } from "three";
+import { WEAPON_OFFSET } from "./CharacterController";
 
 //25 - after this , go back to the CharacterController
 const BULLET_SPEED = 20;
