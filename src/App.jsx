@@ -27,7 +27,7 @@ function App() {
           <Experience />
         </Physics>
       </Suspense>
-      {/* 36 */}
+      {/* 36 bloom on the bullet*/}
       <EffectComposer disableNormalPass>
         <Bloom luminanceThreshold={1} intensity={1.5} mipmapBlur />
       </EffectComposer>
