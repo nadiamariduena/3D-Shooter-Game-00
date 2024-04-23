@@ -1,4 +1,5 @@
 import { RigidBody } from "@react-three/rapier";
+import { isHost } from "playroomkit";
 import { useEffect, useRef } from "react";
 import { MeshBasicMaterial } from "three";
 import { WEAPON_OFFSET } from "./CharacterController";
@@ -69,6 +70,15 @@ export const Bullet = ({
           gravityScale={0}
           //  31 to prevent the impact when hitting  another player
           sensor
+          // 32 add the logic when it hits SOMETHING
+          onIntersectionEnter={(e) => {
+            // only the Host has the permission for the rigidBody, and if the other items ISNT a bullet(because I dont have any relation with a bullet hitting another bullet(optional) )
+            if (isHost() && e.other.rigidBody.userData?.type !== "bullet") {
+              // then i will disable the gravity to prevent that
+              rigidbody.current.setEnabled(false);
+              // in other words, once a bullet do somthing its disabled
+            }
+          }}
         >
           //22
           <mesh position-z={0.25} material={bulletMaterial} castShadow>
