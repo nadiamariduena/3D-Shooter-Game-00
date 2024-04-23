@@ -2,7 +2,7 @@ import { RigidBody } from "@react-three/rapier";
 import { useEffect, useRef } from "react";
 import { MeshBasicMaterial } from "three";
 
-//25
+//25 - after this , go back to the CharacterController
 const BULLET_SPEED = 20;
 //  AFTER defining the bullet speed , go back to the Experience.jsx and import the BUllet
 
@@ -54,15 +54,22 @@ export const Bullet = ({
       position={[position.x, position.y, position.z]}
       rotation-y={angle}
     >
-      <RigidBody
-        //   21
-        ref={rigidbody}
+      //27 Wrap the bullet RIGID
+      <group
+        position-x={WEAPON_OFFSET.x}
+        position-y={WEAPON_OFFSET.y}
+        position-z={WEAPON_OFFSET.z}
       >
-        //22
-        <mesh position-z={0.25} material={bulletMaterial} castShadow>
-          <boxGeometry args={[0.05, 0.05, 0.5]}></boxGeometry>
-        </mesh>
-      </RigidBody>
+        <RigidBody
+          //   21
+          ref={rigidbody}
+        >
+          //22
+          <mesh position-z={0.25} material={bulletMaterial} castShadow>
+            <boxGeometry args={[0.05, 0.05, 0.5]}></boxGeometry>
+          </mesh>
+        </RigidBody>
+      </group>
     </group>
   );
 };

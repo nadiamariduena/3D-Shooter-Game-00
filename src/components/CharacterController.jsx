@@ -11,8 +11,8 @@ const MOVEMENT_SPEED = 200;
 // 7
 const FIRE_RATE = 380;
 //
-// 25 to solve the bullet not being centered to the char
-// i will use this to move the default pos of the bullet
+// 26 to solve the bullet not being centered to the char
+// i will use this to move the default pos of the bullet, now go back to the Bullet.jsx
 export const WEAPON_OFFSET = {
   x: -0.2,
   y: 1.4,
