@@ -194,6 +194,7 @@ export const CharacterController = ({
           // crosshair 29
           {userPlayer && (
             <Crosshair
+              // to set them at the right pos
               position={[WEAPON_OFFSET.x, WEAPON_OFFSET.y, WEAPON_OFFSET.z]}
             />
           )}
