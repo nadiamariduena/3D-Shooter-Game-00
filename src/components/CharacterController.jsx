@@ -204,12 +204,18 @@ export const CharacterController = ({
               state.setState("deaths", state.state.deaths + 1);
               state.setState("dead", true);
               state.setState("health", 0);
-              // remove the rigid to the dead char
+              // remove the rigid to the dead char, so that the bullet dont impact the dead character
               rigidbody.current.setEnabled(false);
+              //
               //
               setTimeout(() => {
                 spawnRandomly();
-              });
+                // the rigid will appear to another place randomly after 2 secs
+                rigidbody.current.setEnabled(true);
+                state.setState("health", 100); // (( setting the health to 100, to restart ))
+                // here we are no longer dead
+                state.setState("dead", false);
+              }, 2000);
             }
           }
         }}
