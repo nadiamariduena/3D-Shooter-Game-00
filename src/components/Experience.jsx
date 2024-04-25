@@ -1,5 +1,11 @@
 import { Environment, OrbitControls } from "@react-three/drei";
-import { insertCoin, Joystick, myPlayer, onPlayerJoin } from "playroomkit";
+import {
+  insertCoin,
+  Joystick,
+  myPlayer,
+  onPlayerJoin,
+  useMultiplayerState,
+} from "playroomkit";
 import { useEffect, useState } from "react";
 import { Bullet } from "./Bullet";
 import { CharacterController } from "./CharacterController";
@@ -14,8 +20,11 @@ export const Experience = () => {
   // 11 by default it s empty
   const [bullets, setBullets] = useState([]);
   //
-  // 38 , playRoom will provide a multiUse player STATE
-  const [networkBullets, setNetworkBullets] = useState("bullets", []);
+  // 38 , playRoomKit will provide a multiUse player STATE, keep in mind that the step 11 is the localstate but if we are another client, like a sec player, we ned to display the state on this step 38
+  const [networkBullets, setNetworkBullets] = useMultiplayerState(
+    "bullets",
+    []
+  );
 
   //
   //
