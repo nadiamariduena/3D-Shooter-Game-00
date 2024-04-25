@@ -21,11 +21,16 @@ export const Experience = () => {
   // 11 by default it s empty
   const [bullets, setBullets] = useState([]);
   //
-  // 38 , playRoomKit will provide a multiUse player STATE, keep in mind that the step 11 is the localstate but if we are another client, like a sec player, we ned to display the state on this step 38
+  // 38 , playRoomKit will provide a multiUse player STATE, keep in mind that the step 11 is the localstate but if we are another client, like a sec player, we need to display the state on this step 38
   const [networkBullets, setNetworkBullets] = useMultiplayerState(
     "bullets",
     []
   );
+
+  /*
+
+  the reason for step 38 is because at the moment(before step 38,,39,40), only one shooter can shoot, so we need to add another state for the enemy shooter
+  */
 
   //
   //
