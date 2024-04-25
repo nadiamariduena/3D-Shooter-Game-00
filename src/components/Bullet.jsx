@@ -48,8 +48,7 @@ export const Bullet = ({
     //SETLINVEL: https://rapier.rs/docs/user_guides/javascript/rigid_bodies/
 
     //
-    // 37 Audio (after adding it)
-
+    // 37 Audio (after adding it), now go to the Experience.jsx
     const audio = new Audio("/audios/rifle.mp3");
     //
     //

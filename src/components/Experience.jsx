@@ -13,6 +13,12 @@ export const Experience = () => {
   // ** Bullets
   // 11 by default it s empty
   const [bullets, setBullets] = useState([]);
+  //
+  // 38 , playRoom will provide a multiUse player STATE
+  const [networkBullets, setNetworkBullets] = useState("bullets", []);
+
+  //
+  //
   //  12
   const onFire = (bullet) => {
     // Setting the bullets to the previous bullets array with the new one. after this you will render the bullets, scroll down to step 13
@@ -25,6 +31,11 @@ export const Experience = () => {
     setBullets((bullets) => bullets.filter((b) => b.id !== bulletId));
     // after this create the comp  Bullet
   };
+  //
+  // 39
+  useEffect(() => {
+    setNetworkBullets(bullets);
+  }, [bullets]);
   //
   //
   // ** LOG ROOM/session ----
