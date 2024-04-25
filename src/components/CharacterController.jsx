@@ -53,6 +53,18 @@ export const CharacterController = ({
   const scene = useThree((state) => state.scene);
   const spawnRandomly = () => {
     //
+    const spawns = [];
+    for (let i = 0; i < 3000; i++) {
+      //
+      const spawn = scene.getObjectByName(`spawn_${i}`);
+      if (spawn) {
+        spawns.push(spawn);
+      } else {
+        break;
+      }
+    }
+    const spawnPos = spawns[Math.floor(Math.random() * spawns.length)].position;
+    rigidbody.current.setTranslation(spawnPos);
   };
 
   //
