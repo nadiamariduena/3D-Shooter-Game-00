@@ -183,7 +183,24 @@ export const CharacterController = ({
         lockRotations
         // checking if I am the host
         // ** the isHost comes from "playroomkit";
+
         type={isHost() ? "dynamic" : "kinematicPosition"}
+        //
+        // 41 shooting the other player
+        onIntersectionEnter={({ other }) => {
+          if (
+            isHost() &&
+            other.rigidBody.userData.type === "bullet" &&
+            state.state.health > 0
+            // alive🌈
+          ) {
+            const newHealth =
+              state.state.health - other.rigidBody.userData.damage;
+            if (newHealth <= 0) {
+              // dead💀
+            }
+          }
+        }}
       >
         <group ref={character}>
           <CharacterSoldier

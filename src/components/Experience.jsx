@@ -135,10 +135,11 @@ export const Experience = () => {
         />
       ))}
 
-      {/* 13 render de fire
+      {/* 13 render de fire, the below was before step 40
         {bullets.map((bullet) => (
 
-      if it the Host, then render the bullets, if not render the other networkBullets
+    40  if it the Host, then render the bullets, if not render the other networkBullets,
+    after this go to CharacterController.jsx
       */}
       {(isHost() ? bullets : networkBullets).map((bullet) => (
         <Bullet
