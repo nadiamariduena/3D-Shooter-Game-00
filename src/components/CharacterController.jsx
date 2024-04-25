@@ -186,6 +186,7 @@ export const CharacterController = ({
 
         type={isHost() ? "dynamic" : "kinematicPosition"}
         //
+        // --------
         // 41 shooting the other player
         onIntersectionEnter={({ other }) => {
           if (
@@ -197,9 +198,18 @@ export const CharacterController = ({
             const newHealth =
               state.state.health - other.rigidBody.userData.damage;
             //
+            //🟢
             if (newHealth <= 0) {
               // dead💀
               state.setState("deaths", state.state.deaths + 1);
+              state.setState("dead", true);
+              state.setState("health", 0);
+              // remove the rigid to the dead char
+              rigidbody.current.setEnabled(false);
+              //
+              setTimeout(() => {
+                spawnRandomly();
+              });
             }
           }
         }}
