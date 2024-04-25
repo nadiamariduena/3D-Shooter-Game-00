@@ -216,6 +216,11 @@ export const CharacterController = ({
                 // here we are no longer dead
                 state.setState("dead", false);
               }, 2000);
+              // the i will call the onKilled state, to increase the state of the player that killed the other player
+              onKilled(state.id, other.rigidBody.userData.player);
+            } else {
+              //
+              state.setState("health", newHealth);
             }
           }
         }}
