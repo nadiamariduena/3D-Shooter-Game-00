@@ -196,8 +196,10 @@ export const CharacterController = ({
           ) {
             const newHealth =
               state.state.health - other.rigidBody.userData.damage;
+            //
             if (newHealth <= 0) {
               // dead💀
+              state.setState("deaths", state.state.deaths + 1);
             }
           }
         }}
