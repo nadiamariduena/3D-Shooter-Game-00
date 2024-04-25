@@ -1,6 +1,7 @@
 import { Environment, OrbitControls } from "@react-three/drei";
 import {
   insertCoin,
+  isHost,
   Joystick,
   myPlayer,
   onPlayerJoin,
@@ -41,7 +42,7 @@ export const Experience = () => {
     // after this create the comp  Bullet
   };
   //
-  // 39
+  // 39 after this,  go to step 40 at the bottom of this file
   useEffect(() => {
     setNetworkBullets(bullets);
   }, [bullets]);
@@ -129,8 +130,12 @@ export const Experience = () => {
         />
       ))}
 
-      {/* 13 render de fire*/}
-      {bullets.map((bullet) => (
+      {/* 13 render de fire
+        {bullets.map((bullet) => (
+
+      if it the Host, then render the bullets, if not render the other networkBullets
+      */}
+      {(isHost() ? bullets : networkBullets).map((bullet) => (
         <Bullet
           //we haven created the Bullet component yet
           key={bullet.id}
