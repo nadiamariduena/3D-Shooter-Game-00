@@ -124,8 +124,9 @@ export const Experience = () => {
         <CharacterController
           key={state.id}
           // the below is temporary
-          //46 remove the below (its a fixed pos for the char, now that we have the random from step 45, we dont need it), test the game and see if the char appears randomly
           // position-x={idx * 2}
+          //46 remove the below (its a fixed pos for the char, now that we have the random from step 45, we dont need it), test the game and see if the char appears randomly, after testing it i will add the health
+
           //
           state={state}
           joystick={joystick}
