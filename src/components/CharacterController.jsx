@@ -67,7 +67,13 @@ export const CharacterController = ({
     rigidbody.current.setTranslation(spawnPos);
   };
 
-  //
+  // 45 after this go to the Experience.jsx
+  useEffect(() => {
+    if (isHost()) {
+      spawnRandomly();
+    }
+  }, []);
+
   //
   useFrame((_, delta) => {
     //
