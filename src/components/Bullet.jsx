@@ -46,6 +46,13 @@ export const Bullet = ({
     //Defining the linear velocity because its a fixed speed for the bullet, after this go to the top and define the Bullet speed.
     rigidbody.current.setLinvel(velocity, true);
     //SETLINVEL: https://rapier.rs/docs/user_guides/javascript/rigid_bodies/
+
+    //
+    // 37 Audio (after adding it)
+
+    const audio = new Audio("/audios/rifle.mp3");
+    //
+    //
   }, []);
 
   //

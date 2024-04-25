@@ -27,7 +27,7 @@ function App() {
           <Experience />
         </Physics>
       </Suspense>
-      {/* 36 bloom on the bullet*/}
+      {/* 36 bloom on the bullet, after this create the audios folder within the public folder, then go back to the Bullet,jsx */}
       <EffectComposer disableNormalPass>
         <Bloom luminanceThreshold={1} intensity={1.5} mipmapBlur />
       </EffectComposer>
