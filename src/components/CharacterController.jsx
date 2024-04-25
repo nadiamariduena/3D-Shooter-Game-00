@@ -27,6 +27,8 @@ export const CharacterController = ({
   userPlayer,
   // 8 after this, add a reference to know when was the last time we fired
   onFire,
+  // 43 add the onKilled
+  onKilled,
   //
   //the rest of the props
   ...props
@@ -198,7 +200,7 @@ export const CharacterController = ({
             const newHealth =
               state.state.health - other.rigidBody.userData.damage;
             //
-            //🟢
+            //🟢 ---- 42
             if (newHealth <= 0) {
               // dead💀
               state.setState("deaths", state.state.deaths + 1);
@@ -209,6 +211,7 @@ export const CharacterController = ({
               //
               //
               setTimeout(() => {
+                // I will create this function in step 44 at the top
                 spawnRandomly();
                 // the rigid will appear to another place randomly after 2 secs
                 rigidbody.current.setEnabled(true);
@@ -222,6 +225,7 @@ export const CharacterController = ({
               //
               state.setState("health", newHealth);
             }
+            //🟢 ---- go to step 43 at the top
           }
         }}
       >
