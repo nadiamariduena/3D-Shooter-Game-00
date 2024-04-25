@@ -43,16 +43,18 @@ export const CharacterController = ({
   // ** to move the character
   const rigidbody = useRef();
   // BY DEFAULT we have the IDLE animation, then when the character will move, the naim will change to RUN
-  //
-  //
   // camera will follow the character
   const controls = useRef();
   // 9 ref to know when was the last time we fired, after this go to the Experience.jsx
   const lastShoot = useRef(0);
-
-  //
-  //
   const [animation, setAnimation] = useState("Idle");
+  //
+  // 44 first create the global scene
+  const scene = useThree((state) => state.scene);
+  const spawnRandomly = () => {
+    //
+  };
+
   //
   //
   useFrame((_, delta) => {
