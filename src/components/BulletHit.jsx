@@ -9,13 +9,37 @@ const bulletHitcolor = new Color("red");
 bulletHitcolor.multiplyScalar(12);
 
 //--------
+//
+//
+// This component represents an animated box that scales and moves towards a target position over time.
 
-//
-//
-//
-export const BulletHit = ({ nb = 100, position, onEnded }) => {
-  //  Generate a number of small boxes with a random TARGET position
+const AnimatedBox = ({ scale, target, speed }) => {
+  // Ref for accessing the instance of the box
+  const ref = useRef();
   //
+  // Use the useFrame hook to update the box's scale and position on each frame
+  useFrame((_, delta) => {
+    //
+    //
+    // Decrease the scale of the box in all dimensions if it hasn't reached zero yet
+
+    if (ref.current.scale.x > 0) {
+      ref.current.scale.x =
+        ref.current.scale.y =
+        ref.current.scale.z -=
+          speed * delta;
+    }
+    // Move the box towards the target position using linear interpolation
+
+    //
+    ref.current.position.lerp(target, speed);
+  });
+  return <Instance ref={ref} scale={scale} position={[0, 0, 0]} />;
+};
+//
+//
+// 🟨 Generate a number of small boxes with a random TARGET position
+export const BulletHit = ({ nb = 100, position, onEnded }) => {
   const boxes = useMemo(
     () =>
       Array.from({ length: nb }, () => ({
