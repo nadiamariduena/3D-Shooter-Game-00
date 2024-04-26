@@ -40,6 +40,9 @@ const AnimatedBox = ({ scale, target, speed }) => {
 //
 // 🟨 Generate a number of small boxes with a random TARGET position
 export const BulletHit = ({ nb = 100, position, onEnded }) => {
+  //
+  // Generate an array of box parameters using useMemo to avoid unnecessary recalculations
+
   const boxes = useMemo(
     () =>
       Array.from({ length: nb }, () => ({
