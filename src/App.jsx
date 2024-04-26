@@ -12,10 +12,13 @@ function App() {
     <>
       <Loader />
       <Leaderboard />
-      // Position the camera on the TOP
-      <Canvas shadows camera={{ position: [0, 30, 0], fov: 30, near: 2 }}>
-        <color attach="background" args={["#ececec"]} />
 
+      <Canvas
+        shadows
+        camera={{ position: [0, 30, 0], fov: 30, near: 2 }}
+        dpr={[1, 1.5]} // optimization to increase performance on retina/4k devices
+      >
+        <color attach="background" args={["#242424"]} />
         <SoftShadows size={42} />
         {/*  ✋ wrapping the "Experience" with a suspense and then with the physics
 
