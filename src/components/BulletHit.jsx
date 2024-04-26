@@ -33,7 +33,7 @@ const AnimatedBox = ({ scale, target, speed }) => {
     ref.current.position.lerp(target, speed);
   });
   //
-  // Return the box instance with specified scale and initial position
+  // Return the box instance with specified scale and initial position,the instance also prevents it from lagging too much
   return <Instance ref={ref} scale={scale} position={[0, 0, 0]} />;
 };
 //
