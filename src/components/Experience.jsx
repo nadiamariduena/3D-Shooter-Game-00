@@ -98,10 +98,11 @@ export const Experience = () => {
   //
   // ** on killed
   const onKilled = (_victim, killer) => {
-    // checks who has the score increased, we will the player within the arr of players based on the ID, and we just increase its kills
+    // checks who has the score increased, we will then find the player,
+    //within the arr of players based on the ID, and we just increase its kills
     const killerState = players.find((p) => p.state.id === killer).state;
     //
-    killerState.setState("killer", killerState.state.kills + 1);
+    killerState.setState("killes", killerState.state.kills + 1);
   };
   //
   //
