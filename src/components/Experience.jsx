@@ -9,6 +9,7 @@ import {
 } from "playroomkit";
 import { useEffect, useState } from "react";
 import { Bullet } from "./Bullet";
+import { BulletHit } from "./BulletHit";
 import { CharacterController } from "./CharacterController";
 import { Map } from "./Map";
 
@@ -169,6 +170,7 @@ export const Experience = () => {
     40  if it the Host, then render the bullets, if not render the other networkBullets,
     after this go to CharacterController.jsx
       */}
+      {/* BULLET */}
       {(isHost() ? bullets : networkBullets).map((bullet) => (
         <Bullet
           //we haven created the Bullet component yet
@@ -176,7 +178,18 @@ export const Experience = () => {
           {...bullet}
           //
           //14 to know when we will make the bullet disappear
-          onHit={() => onHit(bullet.id)}
+          onHit={(position) => onHit(bullet.id, position)}
+        />
+      ))}
+      {/*     HITS */}
+      {(isHost() ? hits : networkHits).map((hit) => (
+        <BulletHit
+          //we haven created the Bullet component yet
+          key={hit.id}
+          {...hit}
+          //
+          //14 to know when we will make the hit disappear
+          onHitEnded={() => onHitEnded(hit.id)}
         />
       ))}
       <Environment preset="sunset" />
