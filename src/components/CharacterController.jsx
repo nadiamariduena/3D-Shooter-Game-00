@@ -109,6 +109,13 @@ export const CharacterController = ({
       );
     }
 
+    //
+    // 46 after the Health panel, after this go to the Experience.jsx and at the bottom add the prop onKilled={onKilled}
+    if (state.state.dead) {
+      setAnimation("Death");
+      return;
+    }
+
     //------ camera controls
     //
     // update player position
@@ -249,6 +256,7 @@ export const CharacterController = ({
           }
         }}
       >
+        //45
         <PlayerInfo state={state.state} />
         <group ref={character}>
           <CharacterSoldier
