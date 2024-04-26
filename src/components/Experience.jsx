@@ -29,7 +29,7 @@ export const Experience = () => {
 
   //
   // -----------
-
+  //  ** HITS 0hit
   const [hits, setHits] = useState([]);
 
   const [networkHits, setNetworkHits] = useMultiplayerState("hits", []);
@@ -54,16 +54,20 @@ export const Experience = () => {
     setBullets((bullets) => bullets.filter((b) => b.id !== bulletId));
     // after this create the comp  Bullet
     //
-    //  ** HITS
+    //  ** HITS 1hit
     // keep in mind that you already have the BulletHit.jsx at this point
     setHits((hits) => [...hits, { id: bulletId, position }]);
   };
   //
-  // 39 after this,  go to step 40 at the bottom of this file
+  //** 39 remove the bullet. after this,  go to step 40 at the bottom of this file
   useEffect(() => {
     setNetworkBullets(bullets);
   }, [bullets]);
   //
+  //  ** HITS2
+  useEffect(() => {
+    setNetworkHits(hits);
+  }, [hits]);
   //
   // ** LOG ROOM/session ----
   const start = async () => {
