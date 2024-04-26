@@ -1,19 +1,22 @@
-import { SoftShadows } from "@react-three/drei";
+import { Loader, SoftShadows } from "@react-three/drei";
 // 35
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import { Canvas } from "@react-three/fiber";
 import { Physics } from "@react-three/rapier";
 import { Suspense } from "react";
 import { Experience } from "./components/Experience";
+import { Leaderboard } from "./components/Leaderboard";
 
 function App() {
   return (
-    // Position the camera on the TOP
-    <Canvas shadows camera={{ position: [0, 30, 0], fov: 30, near: 2 }}>
-      <color attach="background" args={["#ececec"]} />
+    <>
+      <Loader />
+      <Leaderboard /> // Position the camera on the TOP
+      <Canvas shadows camera={{ position: [0, 30, 0], fov: 30, near: 2 }}>
+        <color attach="background" args={["#ececec"]} />
 
-      <SoftShadows size={42} />
-      {/*  ✋ wrapping the "Experience" with a suspense and then with the physics
+        <SoftShadows size={42} />
+        {/*  ✋ wrapping the "Experience" with a suspense and then with the physics
 
           the purpose of the suspense: `<Suspense>` lets you display a fallback until its children have finished loading.
 
@@ -22,16 +25,17 @@ function App() {
           Rigidbody in Unity - Everything You Need to Know
           https://www.youtube.com/watch?v=Y3xkgpCukow
       */}
-      <Suspense>
-        <Physics debug>
-          <Experience />
-        </Physics>
-      </Suspense>
-      {/* 36 bloom on the bullet, after this create the audios folder within the public folder, then go back to the Bullet,jsx */}
-      <EffectComposer disableNormalPass>
-        <Bloom luminanceThreshold={1} intensity={1.5} mipmapBlur />
-      </EffectComposer>
-    </Canvas>
+        <Suspense>
+          <Physics debug>
+            <Experience />
+          </Physics>
+        </Suspense>
+        {/* 36 bloom on the bullet, after this create the audios folder within the public folder, then go back to the Bullet,jsx */}
+        <EffectComposer disableNormalPass>
+          <Bloom luminanceThreshold={1} intensity={1.5} mipmapBlur />
+        </EffectComposer>
+      </Canvas>
+    </>
   );
 }
 
