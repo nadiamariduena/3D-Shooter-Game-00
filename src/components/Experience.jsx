@@ -96,6 +96,7 @@ export const Experience = () => {
     //
   }, []);
   //
+  // ** on killed
   //
   //
   //
@@ -134,6 +135,8 @@ export const Experience = () => {
           //
           // 10 after this, create the list of bullets at the top of this comp
           onFire={onFire}
+          //47 then go to line 99
+          onKilled={onKilled}
         />
       ))}
 
