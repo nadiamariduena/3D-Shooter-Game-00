@@ -30,10 +30,10 @@ const AnimatedBox = ({ scale, target, speed }) => {
           speed * delta;
     }
     // Move the box towards the target position using linear interpolation
-
-    //
     ref.current.position.lerp(target, speed);
   });
+  //
+  // Return the box instance with specified scale and initial position
   return <Instance ref={ref} scale={scale} position={[0, 0, 0]} />;
 };
 //
