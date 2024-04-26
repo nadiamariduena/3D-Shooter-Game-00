@@ -290,8 +290,9 @@ const PlayerInfo = ({ state }) => {
       <mesh position-z={-0.1}>
         <planeGeometry args={[1, 0.2]} />
         <meshBasicMaterial color="black" transparent opacity={0.5} />
-        {/*  */}
-
+      </mesh>
+      {/*  */}
+      <mesh scale-x={health / 100} position-x={-0.5 * (1 - health / 100)}>
         {/*  */}
       </mesh>
     </Billboard>
