@@ -1,4 +1,4 @@
-import { Billboard, CameraControls } from "@react-three/drei";
+import { Billboard, CameraControls, Text } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { CapsuleCollider, RigidBody, vec3 } from "@react-three/rapier";
 import { isHost } from "playroomkit";
@@ -249,6 +249,7 @@ export const CharacterController = ({
           }
         }}
       >
+        <PlayerInfo state={state.state} />
         <group ref={character}>
           <CharacterSoldier
             // bring the props from the CharacterSoldier.jsx line 40
@@ -293,7 +294,8 @@ const PlayerInfo = ({ state }) => {
       </mesh>
       {/*  */}
       <mesh scale-x={health / 100} position-x={-0.5 * (1 - health / 100)}>
-        {/*  */}
+        <planeGeometry args={[1, 0]} />
+        <meshBasicMaterial color="red" />
       </mesh>
     </Billboard>
   );
