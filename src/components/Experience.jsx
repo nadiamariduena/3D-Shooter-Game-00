@@ -27,6 +27,13 @@ export const Experience = () => {
     []
   );
 
+  //
+  // -----------
+
+  const [hits, setHits] = useState([]);
+
+  const [networkHits, setNetworkHits] = useMultiplayerState("hits", []);
+  // -----------
   /*
 
   the reason for step 38 is because at the moment(before step 38,,39,40), only one shooter can shoot, so we need to add another state for the enemy shooter
@@ -41,7 +48,7 @@ export const Experience = () => {
   };
   //
   // 15
-  const onHit = (bulletId) => {
+  const onHit = (bulletId, position) => {
     // we will set the bullet to the previous array of bullets, filtered with the one that has been hit, so it will make it disappear from our array.
     setBullets((bullets) => bullets.filter((b) => b.id !== bulletId));
     // after this create the comp  Bullet
