@@ -1,4 +1,4 @@
-import { CameraControls } from "@react-three/drei";
+import { Billboard, CameraControls } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { CapsuleCollider, RigidBody, vec3 } from "@react-three/rapier";
 import { isHost } from "playroomkit";
@@ -277,8 +277,13 @@ export const CharacterController = ({
 const PlayerInfo = ({ state }) => {
   const health = state.health;
   const name = state.profile.name;
-  return (
   //
+  //
+  return (
+    // ux
+    <Billboard position-y={2.5}>
+      <Text position-y={0.36}>{/*  */}</Text>
+    </Billboard>
   );
 };
 //
