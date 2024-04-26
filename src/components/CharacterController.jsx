@@ -282,7 +282,9 @@ const PlayerInfo = ({ state }) => {
   return (
     // ux
     <Billboard position-y={2.5}>
-      <Text position-y={0.36}>{/*  */}</Text>
+      <Text position-y={0.36} fontSize={0.4}>
+        {/*  */}
+      </Text>
     </Billboard>
   );
 };
