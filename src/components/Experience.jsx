@@ -99,10 +99,10 @@ export const Experience = () => {
   // ** on killed
   const onKilled = (_victim, killer) => {
     // checks who has the score increased, we will then find the player,
-    //within the arr of players based on the ID, and we just increase its kills
+    //within the arr of players based on the ID, and we just increase its kills, after this, create a new component within the "components" folder, call it Leaderboard.jsx
     const killerState = players.find((p) => p.state.id === killer).state;
     //
-    killerState.setState("killes", killerState.state.kills + 1);
+    killerState.setState("kills", killerState.state.kills + 1);
   };
   //
   //

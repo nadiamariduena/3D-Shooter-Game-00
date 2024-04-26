@@ -110,7 +110,7 @@ export const CharacterController = ({
     }
 
     //
-    // 46 after the Health panel, after this go to the Experience.jsx and at the bottom add the prop onKilled={onKilled}
+    //  bottom add the prop onKilled={onKilled}
     if (state.state.dead) {
       setAnimation("Death");
       return;
