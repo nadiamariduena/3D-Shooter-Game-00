@@ -273,6 +273,15 @@ export const CharacterController = ({
 };
 
 //
+// ------ 44 HEALTH
+const PlayerInfo = ({ state }) => {
+  const health = state.health;
+  const name = state.profile.name;
+  return (
+  //
+  );
+};
+//
 // 28
 const Crosshair = (props) => {
   //this will create a line of small boxes that will help you to see the direction of the shooting
