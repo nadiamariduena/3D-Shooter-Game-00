@@ -11,7 +11,8 @@ function App() {
   return (
     <>
       <Loader />
-      <Leaderboard /> // Position the camera on the TOP
+      <Leaderboard />
+      // Position the camera on the TOP
       <Canvas shadows camera={{ position: [0, 30, 0], fov: 30, near: 2 }}>
         <color attach="background" args={["#ececec"]} />
 

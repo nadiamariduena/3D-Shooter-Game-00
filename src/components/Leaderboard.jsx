@@ -1,13 +1,9 @@
-import { userPlayersList } from "playroomkit";
+import { usePlayersList } from "playroomkit";
 
-//
-//
-//
 export const Leaderboard = () => {
-  const players = userPlayersList(true);
+  const players = usePlayersList(true);
   return (
     <>
-      {/* 🟢 BOX with players state */}
       <div className="fixed top-0 left-0 right-0 p-4 flex z-10 gap-4">
         {players.map((player) => (
           <div
@@ -33,12 +29,10 @@ export const Leaderboard = () => {
           </div>
         ))}
       </div>
-      {/* 🟢 Toggle */}
-
       <button
         className="fixed top-4 right-4 z-10 text-white"
         onClick={() => {
-          // toggle fullscreen
+          // 🧡 toggle fullscreen
           if (document.fullscreenElement) {
             document.exitFullscreen();
           } else {
