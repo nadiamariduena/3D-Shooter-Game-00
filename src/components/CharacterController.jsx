@@ -283,8 +283,17 @@ const PlayerInfo = ({ state }) => {
     // ux
     <Billboard position-y={2.5}>
       <Text position-y={0.36} fontSize={0.4}>
-        {/*  */}
+        {name}
+        <meshBasicMaterial color={state.profile.color} />
       </Text>
+      {/*  */}
+      <mesh position-z={-0.1}>
+        <planeGeometry args={[1, 0.2]} />
+        <meshBasicMaterial color="black" transparent opacity={0.5} />
+        {/*  */}
+
+        {/*  */}
+      </mesh>
     </Billboard>
   );
 };
