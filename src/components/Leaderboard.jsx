@@ -5,21 +5,21 @@ import React, { useState } from "react";
 export const Leaderboard = () => {
   const players = usePlayersList(true);
 
-  const [isOpen, setIsOpen] = useState(true);
-  const [isButtonClicked, setIsButtonClicked] = useState(false);
+  // const [isOpen, setIsOpen] = useState(true);
+  // const [isButtonClicked, setIsButtonClicked] = useState(false);
 
-  const closePopup = () => {
-    setIsOpen(false);
-  };
+  // const closePopup = () => {
+  //   setIsOpen(false);
+  // };
 
-  const openPopup = () => {
-    setIsButtonClicked(true);
-  };
+  // const openPopup = () => {
+  //   setIsButtonClicked(true);
+  // };
 
-  const closeButton = () => {
-    setIsButtonClicked(false);
-    setIsOpen(true);
-  };
+  // const closeButton = () => {
+  //   setIsButtonClicked(false);
+  //   setIsOpen(true);
+  // };
   return (
     <>
       <div className="fixed top-0 left-0 right-0 p-4 flex z-10 gap-4">
@@ -73,10 +73,12 @@ export const Leaderboard = () => {
           />
         </svg>
       </button>
-      {/*
+    </>
+  );
+};
 
+/*
 
- */}
       {isOpen && (
         <div className="popup-container fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
           <motion.div
@@ -218,6 +220,4 @@ export const Leaderboard = () => {
           </motion.div>
         </div>
       )}
-    </>
-  );
-};
+ */
