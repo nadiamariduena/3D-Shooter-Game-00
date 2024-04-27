@@ -189,7 +189,7 @@ export const Experience = () => {
           {...hit}
           //
           //14 to know when we will make the hit disappear
-          onHitEnded={() => onHitEnded(hit.id)}
+          onEnded={() => onHitEnded(hit.id)}
         />
       ))}
       <Environment preset="sunset" />
