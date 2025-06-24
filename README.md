@@ -1,6 +1,6 @@
 ## 🚀 Adding the animation to the character
 
-### 🔴 In Progress
+### 🔴🔴 In Progress
 
 - Test the progress: [here 🦄](https://game00-work-in-progress.netlify.app/)
 
