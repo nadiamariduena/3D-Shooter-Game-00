@@ -1,4 +1,4 @@
-## 🚀 Adding the animation to the character
+## 🚀🚀 Adding the animation to the character
 
 ### 🔴🔴 In Progress
 
